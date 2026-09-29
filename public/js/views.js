@@ -13,7 +13,7 @@ views.home = async () => {
     <div class="hero__scene"><img src="/img/hero.jpg" alt="The resort at dusk"></div>
     <div class="hero__inner">
       <span class="eyebrow eyebrow--center" style="color:var(--gold-soft)">Kitale · Kenya</span>
-      <h1>A <em>colonial</em> retreat<br>beneath Mount Elgon</h1>
+      <h1>A retreat<br>beneath <em>Mount Elgon</em></h1>
       <p class="hero__sub">Fifty-six rooms, suites and villas wrapped in manicured gardens on the ridge — a heated pool, destination dining and sunsets over the Cherangani Hills.</p>
       <div class="hero__cta">
         <a class="btn btn--gold btn--lg" href="#/book">Reserve your stay</a>
@@ -32,7 +32,7 @@ views.home = async () => {
       <div class="reveal">
         <span class="eyebrow">Welcome to the ridge</span>
         <h2>English bones, equatorial soul</h2>
-        <p class="lead">Amara Ridge is built in the English colonial manner — deep verandas, tall shutters, pitched roofs — then softened with contemporary Kenyan warmth. The result is a resort that feels both storied and effortless.</p>
+        <p class="lead">Amara Ridge is built in the classic manor-house tradition — deep verandas, tall shutters, pitched roofs — then softened with contemporary Kenyan warmth. The result is a resort that feels both storied and effortless.</p>
         <ul class="tick-list">
           <li>56 rooms, suites, cottages &amp; a private villa</li>
           <li>Heated rooftop pool, gym, steam room, sauna &amp; spa</li>
@@ -295,7 +295,7 @@ async function buildCalendar(el, slug) {
 views.dining = async () => {
   const s = await api('/api/site');
   return `
-  ${pageHero('Dining', 'Three venues, one philosophy: farm-to-table freshness with colonial-era ceremony.', 'Dining', '/img/dining/cedar.jpg')}
+  ${pageHero('Dining', 'Three venues, one philosophy: farm-to-table freshness with old-world ceremony.', 'Dining', '/img/dining/cedar.jpg')}
   <section class="section">
     <div class="wrap grid" style="gap:2rem">
       ${s.restaurants.map((r) => `

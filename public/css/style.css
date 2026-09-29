@@ -220,7 +220,13 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 .hero__eyebrow { color: var(--gold-soft); }
 .hero h1 { font-weight: 500; margin-bottom: 0.35em; text-shadow: 0 2px 40px rgba(0, 0, 0, 0.35); }
 .hero h1 em { font-style: italic; color: var(--gold-soft); }
-.hero__sub { font-size: 1.15rem; color: #d9dccf; max-width: 56ch; margin: 0 auto 2.2rem; }
+.hero__sub {
+  font-size: 1.15rem; color: #f0eee2; max-width: 60ch; margin: 0 auto 2.2rem;
+  background: rgba(8, 21, 15, 0.42);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(224, 196, 127, 0.28);
+  border-radius: 16px; padding: 0.9em 1.4em;
+}
 .hero__cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 .hero__scroll {
   position: absolute; bottom: 7.6rem; left: 50%; transform: translateX(-50%);
