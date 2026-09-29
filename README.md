@@ -23,7 +23,7 @@ Inspired by real boutique resorts in western Kenya; set beneath Mount Elgon in K
 - `node:test` suite: pricing unit tests + full API integration tests
 - Storage abstraction: SQLite (`node:sqlite`) when available, JSON files otherwise — `/tmp` on serverless
 - Security headers + CSP, contact-form honeypot, naive per-IP rate limiting, path-traversal guard
-- GitHub Actions CI, Dockerfile, Vercel-ready (`vercel.json` + `api/` functions)
+- GitHub Actions CI, Dockerfile, Vercel-ready (zero-config `api/` functions)
 
 ## Run it
 
@@ -47,7 +47,8 @@ vercel        # or import the GitHub repo in the Vercel dashboard
 ```
 
 Static assets come from `public/`; every `/api/*` request hits `api/[...path].js` which
-shares the same handler as the local server. On Vercel the writable store uses `/tmp`
+shares the same handler as the local server. Catalogue data is bundled via `require()`
+(traced into the function automatically); the writable store uses `/tmp` on Vercel
 (ephemeral — bookings reset on cold start; fine for a demo, swap in a real DB for prod).
 
 Set a custom admin token in the Vercel dashboard: `ADMIN_TOKEN=...` (default `amara-demo-admin`).
@@ -73,7 +74,7 @@ Set a custom admin token in the Vercel dashboard: `ADMIN_TOKEN=...` (default `am
 
 ```
 server.js            local entrypoint (thin)
-api/                 Vercel serverless entrypoints — same handler
+api/                 Vercel serverless entrypoints (zero-config) — same handler
 lib/app.js           router, pricing engine, availability, bookings, admin, static
 lib/store.js         storage abstraction — sqlite → /tmp → json fallback
 data/                catalogue JSON (rooms, site content) + runtime data
