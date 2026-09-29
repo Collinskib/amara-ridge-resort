@@ -707,3 +707,14 @@ input, select, textarea { font-family: inherit; font-size: 1rem; }
 
 /* default inline icon sizing/alignment (component rules may override via CSS) */
 svg.ic { display: inline-block; vertical-align: -0.22em; flex: none; }
+
+/* ---------- admin ---------- */
+
+.admin-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+.admin-table th {
+  text-align: left; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--ink-soft);
+  padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--line);
+}
+.admin-table td { padding: 0.7rem 0.8rem; border-bottom: 1px dashed var(--line); vertical-align: top; }
+.admin-table tr:hover td { background: rgba(201, 168, 76, 0.06); }

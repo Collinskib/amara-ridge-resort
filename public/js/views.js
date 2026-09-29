@@ -497,6 +497,7 @@ views.contact = (params) => `
           <div class="field"><label>Name</label><input name="name" required></div>
           <div class="field"><label>Email</label><input type="email" name="email" required></div>
           <div class="field full"><label>Subject</label><input name="subject" value="${esc(params?.subject || 'General enquiry')}"></div>
+          <input name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;height:0;width:0;opacity:0">
           <div class="field full"><label>Message</label><textarea name="message" required placeholder="Tell us about your stay…"></textarea></div>
           <div class="full"><button class="btn btn--gold" type="submit">Send message</button></div>
         </form>

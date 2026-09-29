@@ -227,6 +227,9 @@ views.confirmation = async (ref) => {
       </div>
       <div class="panel" style="margin-top:2rem">
         ${r ? `<div class="summary__media"><img src="${r.photo}" alt="${esc(r.name)}"></div><h3>${esc(r.name)}</h3>` : ''}
+        <div class="summary-line"><span>Payment</span><span>${b.paymentStatus === 'paid'
+          ? `<span class="badge badge--ok">Paid · ${esc(b.payment?.receipt || '')}</span>`
+          : '<span class="badge badge--low">Pending — pay on arrival or now</span>'}</span></div>
         <div class="summary-line"><span>Guest</span><span>${esc(b.guest.firstName)} ${esc(b.guest.lastName)}</span></div>
         <div class="summary-line"><span>Check-in</span><span>${fmtDate(b.checkin)} · from 14:00</span></div>
         <div class="summary-line"><span>Check-out</span><span>${fmtDate(b.checkout)} · by 11:00</span></div>
@@ -238,6 +241,7 @@ views.confirmation = async (ref) => {
         <div class="summary-total"><span>Total</span><strong>${money(b.pricing.total)}</strong></div>
       </div>
       <div style="display:flex;gap:.8rem;margin-top:1.6rem;flex-wrap:wrap">
+        ${b.status === 'confirmed' && b.paymentStatus !== 'paid' ? '<button class="btn btn--gold" id="mpesaBtn">Pay with M-Pesa</button>' : ''}
         <a class="btn btn--dark" href="#/">Back to home</a>
         <a class="btn btn--ghost" href="#/manage">Manage booking</a>
       </div>
@@ -249,7 +253,35 @@ views.confirmation.after = (ref) => {
   $('#copyRef')?.addEventListener('click', () => {
     navigator.clipboard?.writeText(ref).then(() => toast('Reference copied'));
   });
+  $('#mpesaBtn')?.addEventListener('click', () => mpesaFlow(ref));
 };
+
+/* Simulated M-Pesa STK push */
+function mpesaFlow(ref) {
+  const saved = JSON.parse(localStorage.getItem('ar_last_booking') || 'null');
+  const email = saved?.ref === ref ? saved.email : '';
+  openModal(`
+    <h3 style="margin-top:0">Pay with M-Pesa</h3>
+    <p style="color:var(--ink-soft);font-size:.92rem">Enter your M-Pesa number — you'll get an STK push to confirm with your PIN. <em>(Simulated — no money moves.)</em></p>
+    <form id="mpesaForm" class="form-grid">
+      <div class="field full"><label>M-Pesa phone</label><input name="phone" required placeholder="07XX XXX XXX" value=""></div>
+      <div class="full"><button class="btn btn--gold" style="width:100%" id="mpesaGo">Send payment request</button></div>
+    </form>`);
+  $('#mpesaForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = $('#mpesaGo');
+    btn.disabled = true; btn.textContent = 'Waiting for PIN entry…';
+    try {
+      const r = await api('/api/payments/mpesa', { method: 'POST', body: { ref, email, phone: e.target.phone.value } });
+      closeModal();
+      toast(r.message);
+      render();
+    } catch (err) {
+      btn.disabled = false; btn.textContent = 'Send payment request';
+      toast(err.message, true);
+    }
+  });
+}
 
 /* ================= MANAGE BOOKING ================= */
 
@@ -293,10 +325,42 @@ views.manage.after = () => {
           <div class="summary-line"><span>Reference</span><span>${esc(b.ref)}</span></div>
           <div class="summary-line"><span>Dates</span><span>${fmtDate(b.checkin)} → ${fmtDate(b.checkout)}</span></div>
           <div class="summary-line"><span>Guests</span><span>${b.adults + b.children}</span></div>
+          <div class="summary-line"><span>Payment</span><span>${b.paymentStatus === 'paid'
+            ? `<span class="badge badge--ok">Paid · ${esc(b.payment?.receipt || '')}</span>`
+            : '<span class="badge badge--low">Pending</span>'}</span></div>
           <div class="summary-total"><span>Total paid on arrival</span><strong>${money(b.pricing.total)}</strong></div>
           ${b.status === 'confirmed' && !past ? `
-            <button class="btn btn--ghost" id="cancelBtn" style="margin-top:1rem;color:#b05252;border-color:#b05252">Cancel booking</button>` : ''}
+            <div style="display:flex;gap:.6rem;margin-top:1rem;flex-wrap:wrap">
+              ${b.paymentStatus !== 'paid' ? '<button class="btn btn--gold" id="payBtn">Pay with M-Pesa</button>' : ''}
+              <button class="btn btn--ghost" id="modBtn">Change dates</button>
+              <button class="btn btn--ghost" id="cancelBtn" style="color:#b05252;border-color:#b05252">Cancel booking</button>
+            </div>
+            <div id="modBox" style="display:none;margin-top:1rem">
+              <form id="modForm" class="form-grid">
+                ${bookbarFields({ checkin: b.checkin, checkout: b.checkout, adults: b.adults, children: b.children }).replaceAll('bookbar__field', 'field')}
+                <div class="field" style="display:flex;align-items:end"><button class="btn btn--dark">Re-quote &amp; save</button></div>
+              </form>
+            </div>` : ''}
         </div>`;
+
+      $('#payBtn')?.addEventListener('click', () => mpesaFlow(b.ref));
+      $('#modBtn')?.addEventListener('click', () => {
+        const box = $('#modBox');
+        box.style.display = box.style.display === 'none' ? 'block' : 'none';
+      });
+      $('#modForm')?.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const f = e.target;
+        if (f.checkout.value <= f.checkin.value) return toast('Check-out must be after check-in', true);
+        try {
+          await api(`/api/bookings/${encodeURIComponent(b.ref)}`, { method: 'PATCH', body: {
+            email: f.email?.value || $('#lookupForm').email.value.trim(),
+            checkin: f.checkin.value, checkout: f.checkout.value,
+            adults: +f.adults.value, children: +f.children.value } });
+          toast('Booking updated — new total applied');
+          $('#lookupForm').dispatchEvent(new Event('submit', { cancelable: true }));
+        } catch (err) { toast(err.message, true); }
+      });
       $('#cancelBtn')?.addEventListener('click', () => {
         openModal(`
           <h3 style="margin-top:0">Cancel booking ${esc(b.ref)}?</h3>
@@ -355,6 +419,7 @@ async function render() {
     case 'book': view = views.book; arg = params; break;
     case 'confirmation': view = views.confirmation; arg = segs[1]; break;
     case 'manage': view = views.manage; break;
+    case 'admin': view = views.admin; break;
     default:
       app.innerHTML = `<div class="notfound"><div><h2>Page not found</h2><a class="btn btn--dark" href="#/">Back home</a></div></div>`;
       return;

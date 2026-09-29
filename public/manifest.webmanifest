@@ -1,0 +1,13 @@
+{
+  "name": "Amara Ridge Resort",
+  "short_name": "Amara Ridge",
+  "description": "Luxury highland resort in Kitale, Kenya — rooms, spa, dining, events.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0e2a21",
+  "theme_color": "#16352b",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

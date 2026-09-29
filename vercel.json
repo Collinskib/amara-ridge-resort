@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "functions": {
+    "api/index.js": { "includeFiles": ["data/**", "lib/**"] },
+    "api/[...path].js": { "includeFiles": ["data/**", "lib/**"] }
+  }
+}

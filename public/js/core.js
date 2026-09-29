@@ -134,6 +134,9 @@ function roomCard(r) {
 
 function initShell() {
   $('#year').textContent = new Date().getFullYear();
+  if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+    addEventListener('load', () => navigator.serviceWorker.register('/sw.js').catch(() => {}));
+  }
   const nav = $('#nav');
   const onScroll = () => nav.classList.toggle('nav--solid',
     window.scrollY > 40 || nav.dataset.solid === '1');
