@@ -1,0 +1,297 @@
+{
+  "restaurants": [
+    {
+      "name": "The Cedar Restaurant",
+      "cuisine": "Contemporary Pan-African",
+      "hours": "06:30 – 22:30",
+      "setting": "Fine dining room & terrace",
+      "blurb": "Signature dining beneath the cedar beams — highland trout, dry-aged cuts and a cellar of over 200 labels.",
+      "gradient": [
+        "#5a3a1e",
+        "#c98d45"
+      ],
+      "menu": [
+        {
+          "course": "Starters",
+          "items": [
+            "Avocado & macadamia salad, lime — KES 1,450",
+            "Roast pumpkin soup, smoked honey — KES 980",
+            "Carpaccio of beef, rocket & parmesan — KES 1,600"
+          ]
+        },
+        {
+          "course": "Mains",
+          "items": [
+            "Mt Elgon trout, almond & brown butter — KES 2,850",
+            "Dry-aged ribeye, bone marrow jus — KES 4,200",
+            "Wild mushroom risotto, truffle oil — KES 2,300"
+          ]
+        },
+        {
+          "course": "Desserts",
+          "items": [
+            "Passion fruit crème brûlée — KES 1,100",
+            "Chocolate fondant, baobab ice cream — KES 1,250"
+          ]
+        }
+      ],
+      "photo": "/img/dining/cedar.jpg"
+    },
+    {
+      "name": "Mizizi Pool Bar & Grill",
+      "cuisine": "Alfresco grill & cocktails",
+      "hours": "10:00 – 23:00",
+      "setting": "Rooftop poolside",
+      "blurb": "Barefoot lunches and sundowners beside the heated rooftop pool. Wood-fired pizzas, nyama choma and craft cocktails.",
+      "gradient": [
+        "#1d4e5f",
+        "#4db6ac"
+      ],
+      "menu": [
+        {
+          "course": "Grill",
+          "items": [
+            "Nyama choma platter for two — KES 3,400",
+            "Wood-fired margherita — KES 1,350",
+            "Peri-peri chicken — KES 1,900"
+          ]
+        },
+        {
+          "course": "Sundowners",
+          "items": [
+            "Dawa cocktail — KES 950",
+            "Tusker lager — KES 450",
+            "Passion mojito — KES 1,050"
+          ]
+        }
+      ],
+      "photo": "/img/dining/mizizi.jpg"
+    },
+    {
+      "name": "The Veranda Lounge",
+      "cuisine": "Afternoon tea & light bites",
+      "hours": "07:00 – 19:00",
+      "setting": "Colonial veranda & gardens",
+      "blurb": "High tea at four, Kericho single-origin coffee all day, and the best scones this side of the Cheranganis.",
+      "gradient": [
+        "#41584a",
+        "#9caf88"
+      ],
+      "menu": [
+        {
+          "course": "Tea & Coffee",
+          "items": [
+            "High tea for two — KES 3,200",
+            "Kericho gold tea — KES 420",
+            "Single-origin pour over — KES 550"
+          ]
+        },
+        {
+          "course": "Bites",
+          "items": [
+            "Scones, clotted cream & jam — KES 780",
+            "Club sandwich — KES 1,250"
+          ]
+        }
+      ],
+      "photo": "/img/dining/veranda.jpg"
+    }
+  ],
+  "wellness": {
+    "intro": "The Acacia Health Club sits above the resort with a heated rooftop pool, steam rooms, sauna and a full spa. Free access for all resident guests.",
+    "facilities": [
+      {
+        "name": "Heated Rooftop Pool",
+        "detail": "Pre-heated to 29°C, open 06:00 – 21:00",
+        "icon": "pool",
+        "photo": "/img/wellness/pool.jpg"
+      },
+      {
+        "name": "The Acacia Gym",
+        "detail": "Cardio, free weights & personal trainers",
+        "icon": "gym",
+        "photo": "/img/wellness/gym.jpg"
+      },
+      {
+        "name": "Steam & Sauna",
+        "detail": "Eucalyptus steam room, cedar sauna",
+        "icon": "steam",
+        "photo": "/img/wellness/steam.jpg"
+      },
+      {
+        "name": "The Acacia Spa",
+        "detail": "Six treatment rooms, book ahead",
+        "icon": "spa",
+        "photo": "/img/wellness/spa.jpg"
+      }
+    ],
+    "treatments": [
+      {
+        "name": "Swedish Massage",
+        "duration": "60 min",
+        "price": 6500
+      },
+      {
+        "name": "Deep Tissue Massage",
+        "duration": "75 min",
+        "price": 8000
+      },
+      {
+        "name": "Couples Ritual",
+        "duration": "90 min",
+        "price": 15000
+      },
+      {
+        "name": "Aloe & Clay Wrap",
+        "duration": "45 min",
+        "price": 5500
+      },
+      {
+        "name": "Signature Facial",
+        "duration": "60 min",
+        "price": 7000
+      }
+    ],
+    "membership": "Non-residents: KES 500 daily · KES 5,000 monthly"
+  },
+  "experiences": [
+    {
+      "name": "Mount Elgon Day Safari",
+      "duration": "Full day",
+      "price": 11500,
+      "category": "Nature",
+      "icon": "mountain",
+      "blurb": "Caves, elephants and hot springs on the volcano's lower slopes — picnic lunch included."
+    },
+    {
+      "name": "Saiwa Swamp Sitatunga Walk",
+      "duration": "4 hours",
+      "price": 4200,
+      "category": "Nature",
+      "icon": "tree",
+      "blurb": "Boardwalk through Kenya's smallest park to spot the rare semi-aquatic sitatunga antelope."
+    },
+    {
+      "name": "Kitale Heritage & Museum Tour",
+      "duration": "3 hours",
+      "price": 2500,
+      "category": "Culture",
+      "icon": "walk",
+      "blurb": "The museum's natural history galleries, then the colourful municipal market."
+    },
+    {
+      "name": "Cherangani Hills Forest Trek",
+      "duration": "Full day",
+      "price": 9500,
+      "category": "Adventure",
+      "icon": "island",
+      "blurb": "Guided hike through indigenous forest to waterfalls and valley viewpoints."
+    },
+    {
+      "name": "Ridge Cycling Tour",
+      "duration": "3 hours",
+      "price": 3000,
+      "category": "Adventure",
+      "icon": "bike",
+      "blurb": "Guided ride through wheat farms and dairy lanes on the Trans-Nzoia plateau."
+    },
+    {
+      "name": "Kapolet Forest Sundowner",
+      "duration": "4 hours",
+      "price": 5500,
+      "category": "Culture",
+      "icon": "rock",
+      "blurb": "A forest glade picnic at dusk — birdsong, lanterns and cocktails back at the bar."
+    }
+  ],
+  "events": {
+    "intro": "From garden weddings to boardroom retreats, our pavilions and lawns host gatherings of 10 to 500 beneath the Elgon foothills.",
+    "venues": [
+      {
+        "name": "Pavilion One",
+        "capacity": "300 guests",
+        "use": "Weddings & galas"
+      },
+      {
+        "name": "Pavilion Two",
+        "capacity": "180 guests",
+        "use": "Receptions & conferences"
+      },
+      {
+        "name": "The Boardroom",
+        "capacity": "20 guests",
+        "use": "Executive meetings"
+      },
+      {
+        "name": "Pool Lawn",
+        "capacity": "500 guests",
+        "use": "Outdoor ceremonies"
+      }
+    ],
+    "weddingPackages": [
+      {
+        "name": "Garden",
+        "price": "from KES 280,000",
+        "includes": [
+          "Reception venue (Pavilion Two)",
+          "Discounted guest accommodation",
+          "Gardens & poolside photos (2 hrs)",
+          "Free Wi-Fi & parking"
+        ]
+      },
+      {
+        "name": "Hillside",
+        "price": "from KES 520,000",
+        "includes": [
+          "All Garden benefits",
+          "1 night Executive Suite for the couple",
+          "House wine & flowers in the room",
+          "10% off sound system"
+        ]
+      },
+      {
+        "name": "Signature",
+        "price": "from KES 890,000",
+        "includes": [
+          "All Hillside benefits",
+          "1 night Honeymoon Suite + first anniversary stay",
+          "DJ, MC & decor consultation",
+          "Dedicated wedding planner"
+        ]
+      }
+    ]
+  },
+  "promoCodes": {
+    "AMARA10": {
+      "type": "percent",
+      "value": 10,
+      "description": "10% off all stays"
+    },
+    "STAY3": {
+      "type": "percent",
+      "value": 12,
+      "minNights": 3,
+      "description": "12% off stays of 3+ nights"
+    },
+    "HONEYMOON": {
+      "type": "percent",
+      "value": 15,
+      "roomTypes": [
+        "suite",
+        "villa"
+      ],
+      "description": "15% off suites & villas"
+    },
+    "WEEKDAY": {
+      "type": "percent",
+      "value": 8,
+      "description": "8% off Sun–Thu nights"
+    }
+  },
+  "exchangeRates": {
+    "KES": 1,
+    "USD": 0.0077,
+    "EUR": 0.0071,
+    "GBP": 0.0061
+  }
+}

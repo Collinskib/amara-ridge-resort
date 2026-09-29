@@ -1,0 +1,11 @@
+{
+  "name": "amara-ridge-resort",
+  "version": "1.0.0",
+  "description": "Amara Ridge Resort - luxury hotel sample site (zero-dependency Node.js)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "license": "MIT"
+}

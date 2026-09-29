@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Wanjiru K.",
+    "location": "Nairobi, Kenya",
+    "rating": 5,
+    "room": "Deluxe Hill View",
+    "text": "The balcony at sunrise is worth every shilling. Staff remembered my coffee order by day two — that never happens."
+  },
+  {
+    "name": "Daniel O.",
+    "location": "London, UK",
+    "rating": 5,
+    "room": "Executive Suite",
+    "text": "Ran three days of board meetings here and the team still talks about the food. The rooftop pool at 6am is a secret worth keeping."
+  },
+  {
+    "name": "Amara & Felipe M.",
+    "location": "São Paulo, Brazil",
+    "rating": 5,
+    "room": "Honeymoon Suite",
+    "text": "Private plunge pool, sunset over the hills, champagne appearing as if by magic. We cancelled a safari day just to stay in."
+  },
+  {
+    "name": "Grace A.",
+    "location": "Kampala, Uganda",
+    "rating": 4,
+    "room": "Family Garden Cottage",
+    "text": "The kids lived in the garden and pool. Kitchenette saved us a fortune and the staff treated them like royalty."
+  },
+  {
+    "name": "Jonas S.",
+    "location": "Berlin, Germany",
+    "rating": 5,
+    "room": "Elgon Villa",
+    "text": "Hosted our whole family in the villa for a week. The butler and chef service is the best value in East Africa, full stop."
+  }
+]

@@ -1,0 +1,265 @@
+[
+  {
+    "slug": "superior-garden-room",
+    "name": "Superior Garden Room",
+    "tagline": "Serenity among the manicured gardens",
+    "type": "room",
+    "inventory": 18,
+    "size": 28,
+    "capacity": 2,
+    "beds": "1 King or 2 Twins",
+    "view": "Garden",
+    "rate": 14500,
+    "gradient": [
+      "#2d5a3d",
+      "#7fb069"
+    ],
+    "icon": "leaf",
+    "amenities": [
+      "wifi",
+      "tv",
+      "coffee",
+      "safe",
+      "ac",
+      "breakfast",
+      "minibar"
+    ],
+    "features": [
+      "Rain shower & premium toiletries",
+      "Private terrace facing the gardens",
+      "Evening turndown service",
+      "Complimentary bottled water"
+    ],
+    "description": "Wrapped in the calm of our landscaped gardens, the Superior Garden Room pairs colonial-inspired furnishings with warm modern finishes. Wake to birdsong and filtered morning light on your private terrace.",
+    "photo": "/img/rooms/superior-garden-room.jpg"
+  },
+  {
+    "slug": "deluxe-hill-view",
+    "name": "Deluxe Hill View Room",
+    "tagline": "Panoramas of the Cherangani Hills",
+    "type": "room",
+    "inventory": 12,
+    "size": 34,
+    "capacity": 3,
+    "beds": "1 King + day bed",
+    "view": "Hills",
+    "rate": 19500,
+    "gradient": [
+      "#1d4e5f",
+      "#63aabc"
+    ],
+    "icon": "mountain",
+    "amenities": [
+      "wifi",
+      "tv",
+      "coffee",
+      "safe",
+      "ac",
+      "breakfast",
+      "minibar",
+      "balcony",
+      "bathtub"
+    ],
+    "features": [
+      "Wide balcony with hill views",
+      "Soaking tub + rain shower",
+      "Espresso machine",
+      "Evening turndown service"
+    ],
+    "description": "Perched on our upper floors, the Deluxe Hill View frames the ridge in every window. A generous balcony, deep soaking tub and plush king bed make it our most-loved room for slow mornings.",
+    "photo": "/img/rooms/deluxe-hill-view.jpg"
+  },
+  {
+    "slug": "superior-deluxe",
+    "name": "Superior Deluxe",
+    "tagline": "A lounge of your own, above the gardens",
+    "type": "room",
+    "inventory": 10,
+    "size": 42,
+    "capacity": 3,
+    "beds": "1 King + lounge sofa",
+    "view": "Garden & Pool",
+    "rate": 24500,
+    "gradient": [
+      "#6b4a2b",
+      "#c99e5f"
+    ],
+    "icon": "sun",
+    "amenities": [
+      "wifi",
+      "tv",
+      "coffee",
+      "safe",
+      "ac",
+      "breakfast",
+      "minibar",
+      "balcony",
+      "bathtub",
+      "lounge"
+    ],
+    "features": [
+      "Separate lounge seating area",
+      "Double vanity bathroom",
+      "Pool & garden views",
+      "Late checkout subject to availability"
+    ],
+    "description": "A step up in space and light. The Superior Deluxe adds a private lounge nook, double vanities and sweeping views across the pool terrace to the gardens beyond.",
+    "photo": "/img/rooms/superior-deluxe.jpg"
+  },
+  {
+    "slug": "executive-suite",
+    "name": "Executive Suite",
+    "tagline": "Business by day, indulgence by night",
+    "type": "suite",
+    "inventory": 8,
+    "size": 58,
+    "capacity": 3,
+    "beds": "1 King, separate living room",
+    "view": "Hills & Valley",
+    "rate": 38000,
+    "gradient": [
+      "#3d2c4f",
+      "#8d6ba8"
+    ],
+    "icon": "crown",
+    "amenities": [
+      "wifi",
+      "tv",
+      "coffee",
+      "safe",
+      "ac",
+      "breakfast",
+      "minibar",
+      "balcony",
+      "bathtub",
+      "lounge",
+      "butler",
+      "workspace"
+    ],
+    "features": [
+      "Separate living & dining room",
+      "Dedicated work desk",
+      "Club Lounge access",
+      "Priority spa reservations"
+    ],
+    "description": "Our signature suite: a full living room, dining nook and work space wrapped around a tranquil king bedroom. Ideal for executives, honeymooners and anyone who likes their space.",
+    "photo": "/img/rooms/executive-suite.jpg"
+  },
+  {
+    "slug": "honeymoon-suite",
+    "name": "Honeymoon Suite",
+    "tagline": "Private plunge pool above the treetops",
+    "type": "suite",
+    "inventory": 4,
+    "size": 72,
+    "capacity": 2,
+    "beds": "1 Four-poster King",
+    "view": "Sunset Hills",
+    "rate": 68000,
+    "gradient": [
+      "#7a2e4a",
+      "#e08dac"
+    ],
+    "icon": "heart",
+    "amenities": [
+      "wifi",
+      "tv",
+      "coffee",
+      "safe",
+      "ac",
+      "breakfast",
+      "minibar",
+      "balcony",
+      "bathtub",
+      "lounge",
+      "butler",
+      "pool"
+    ],
+    "features": [
+      "Private plunge pool on the terrace",
+      "Champagne & fruit on arrival",
+      "In-room couples dining option",
+      "Complimentary couples massage (3+ nights)"
+    ],
+    "description": "The most romantic address on the ridge. A four-poster bed, sunset-facing terrace with your own plunge pool, and butler service that knows when to appear and when to vanish.",
+    "photo": "/img/rooms/honeymoon-suite.jpg"
+  },
+  {
+    "slug": "family-cottage",
+    "name": "Family Garden Cottage",
+    "tagline": "Two bedrooms, one private garden",
+    "type": "cottage",
+    "inventory": 2,
+    "size": 84,
+    "capacity": 5,
+    "beds": "1 King + 2 Twins + sofa bed",
+    "view": "Private Garden",
+    "rate": 52000,
+    "gradient": [
+      "#4f6212",
+      "#a9b665"
+    ],
+    "icon": "home",
+    "amenities": [
+      "wifi",
+      "tv",
+      "coffee",
+      "safe",
+      "ac",
+      "breakfast",
+      "minibar",
+      "bathtub",
+      "lounge",
+      "kitchenette"
+    ],
+    "features": [
+      "Two bedrooms + living room",
+      "Kitchenette & dining for five",
+      "Fenced private garden",
+      "Board games & kids' welcome pack"
+    ],
+    "description": "A self-contained cottage at the garden's edge — two bedrooms, a kitchenette and a fenced lawn where children can play while you linger over breakfast on the veranda.",
+    "photo": "/img/rooms/family-cottage.jpg"
+  },
+  {
+    "slug": "lakeside-villa",
+    "name": "Elgon Villa",
+    "tagline": "Your own estate above the plateau",
+    "type": "villa",
+    "inventory": 1,
+    "size": 250,
+    "capacity": 6,
+    "beds": "3 King bedrooms",
+    "view": "Mt Elgon Panorama",
+    "rate": 95000,
+    "gradient": [
+      "#123f33",
+      "#2e8b6e"
+    ],
+    "icon": "star",
+    "amenities": [
+      "wifi",
+      "tv",
+      "coffee",
+      "safe",
+      "ac",
+      "breakfast",
+      "minibar",
+      "balcony",
+      "bathtub",
+      "lounge",
+      "butler",
+      "pool",
+      "kitchenette",
+      "workspace"
+    ],
+    "features": [
+      "Three en-suite king bedrooms",
+      "Private infinity pool & BBQ deck",
+      "Dedicated butler & chef on call",
+      "Airport transfers included"
+    ],
+    "description": "Our crown jewel. Three en-suite bedrooms, a private infinity pool facing Mount Elgon, full kitchen, dining pavilion and a butler on call around the clock.",
+    "photo": "/img/rooms/lakeside-villa.jpg"
+  }
+]
